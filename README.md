@@ -8,7 +8,7 @@ A borg server for libre.sh.
 cd /system
 git clone https://github.com/indiehosters/borg-server borg-servername
 cd borg-servername
-mv .env.sample .env
+cp .env.sample .env
 vi env #add your ssh public key
 libre start
 libre enable
