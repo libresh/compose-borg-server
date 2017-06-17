@@ -2,9 +2,9 @@ borg:
   image: indiehosters/borg
   environment:
   - BORG_MODE=SERVER
+  - SSH_KEY
   volumes:
   - ./etc-ssh:/etc/ssh
-  - ./authorized_keys:/home/borg/.ssh/authorized_keys
-  - /data/backups/XXserver-nameXX:/backups
+  - ${FOLDER}:/backups
   ports:
-  - "XXportXX:22"
+  - "${PORT}:22"
