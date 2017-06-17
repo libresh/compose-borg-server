@@ -13,3 +13,5 @@ services:
     - ${FOLDER}:/backups
     ports:
     - "${PORT}:22"
+    networks:
+    - back
