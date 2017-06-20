@@ -2,6 +2,10 @@ version: '2'
 networks:
   back:
     driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 10.1.1.0/30
 services:
   borg:
     image: indiehosters/borg
