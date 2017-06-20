@@ -5,7 +5,7 @@ networks:
     ipam:
       driver: default
       config:
-      - subnet: 10.1.1.0/30
+      - subnet: ${SUBNET:-10.1.2.0}/30
 services:
   borg:
     image: indiehosters/borg
